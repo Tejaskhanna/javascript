@@ -1,0 +1,660 @@
+<html>
+	<head>
+		<title> Validation </title>
+		<link rel="stylesheet" href="assets/css/bootstrap.css">
+		
+		<script>
+			function saveform()
+			{
+				var fname=document.getElementById("fname").value;
+				var mname=document.getElementById("mname").value;
+				var lname=document.getElementById("lname").value;
+				var email=document.getElementById("email").value;
+				var pass=document.getElementById("pass").value;
+				var confirm=document.getElementById("confirm").value;
+				var mob=document.getElementById("mob").value;
+				var city=document.getElementById("city").value;
+				var state=document.getElementById("state").value;
+				var add=document.getElementById("add").value;
+				var male=document.getElementById("male").checked;
+				var female=document.getElementById("female").checked;
+				var exp=document.getElementById("exp").value;
+				var desi=document.getElementById("desi").value;
+				var time=document.getElementById("time").value;
+				var loc=document.getElementById("loc").value;
+				var cb1=document.getElementById("cb1").checked;
+				var cb2=document.getElementById("cb2").checked;
+				var cb3=document.getElementById("cb3").checked;
+				var cb4=document.getElementById("cb4").checked;
+				var salary=document.getElementById("salary").value;
+
+				var status=true;
+
+
+				if(fname=="")
+				{
+					document.getElementById("fname").style.borderColor="red";
+					document.getElementById("efname").innerHTML="Invalid First name";
+
+					status=false;
+				}
+				else
+				{
+					document.getElementById("fname").style.borderColor="green";
+					document.getElementById("efname").innerHTML="";
+					
+				}
+
+				if(mname=="")
+				{
+					document.getElementById("mname").style.borderColor="red";
+					document.getElementById("emname").innerHTML="Invalid Middle name";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("mname").style.borderColor="green";
+					document.getElementById("emname").innerHTML="";
+					
+				}	
+
+
+
+				if(lname=="")
+				{
+					document.getElementById("lname").style.borderColor="red";
+					document.getElementById("elname").innerHTML="Invalid last name";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("lname").style.borderColor="green";
+					document.getElementById("elname").innerHTML="";
+					
+				}
+
+
+
+				if(email=="")
+				{
+					document.getElementById("email").style.borderColor="red";
+					document.getElementById("eemail").innerHTML="Invalid Email";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("email").style.borderColor="green";
+					document.getElementById("eemail").innerHTML="";
+					
+				}
+
+
+
+
+				if(pass=="")
+				{
+					document.getElementById("pass").style.borderColor="red";
+					document.getElementById("epass").innerHTML="Invalid Password";
+					status=false;
+
+				}
+				else
+				{
+					document.getElementById("pass").style.borderColor="green";
+					
+					document.getElementById("epass").innerHTML="";
+
+					
+				}
+
+				if(confirm==""||pass!=confirm)
+				{
+					document.getElementById("confirm").style.borderColor="red";
+					document.getElementById("econfirm").innerHTML="Invalid Password";
+
+					status=false;
+				}
+				else
+				{
+					document.getElementById("confirm").style.borderColor="green";
+					document.getElementById("econfirm").innerHTML="";
+					
+				}
+
+
+
+
+				if(mob==""||mob.length<10||isNaN(mob))
+				{
+					document.getElementById("mob").style.borderColor="red";
+					document.getElementById("emob").innerHTML="Invalid Mobile Number";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("mob").style.borderColor="green";
+					document.getElementById("emob").innerHTML="";
+					
+				}
+
+
+
+
+
+				if(city=="")
+				{
+					document.getElementById("city").style.borderColor="red";
+					document.getElementById("ecity").innerHTML="Invalid City";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("city").style.borderColor="green";
+					document.getElementById("ecity").innerHTML="";
+					
+				}
+
+
+
+
+
+
+				if(state=="")
+				{
+					document.getElementById("state").style.borderColor="red";
+					document.getElementById("estate").innerHTML="Invalid state";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("state").style.borderColor="green";
+					document.getElementById("estate").innerHTML="";
+					
+				}
+
+
+				if(add=="")
+				{
+					document.getElementById("add").style.borderColor="red";
+					document.getElementById("eadd").innerHTML="Invalid Address";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("add").style.borderColor="green";
+					document.getElementById("eadd").innerHTML="";
+					
+				
+				}
+
+
+
+				if(male==true||female==true)
+				{
+					document.getElementById("egen").innerHTML="";
+				}
+				else
+				{
+					document.getElementById("egen").innerHTML="Invalid Selection";
+					status=false;
+					
+				}
+
+
+
+
+
+				if(exp=="")
+				{
+					document.getElementById("exp").style.borderColor="red";
+					document.getElementById("eexp").innerHTML="Invalid Selection";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("exp").style.borderColor="green";
+					document.getElementById("eexp").innerHTML="";
+					
+				}
+
+
+
+
+
+
+
+
+
+
+				if(desi=="")
+				{
+					document.getElementById("desi").style.borderColor="red";
+					document.getElementById("edesi").innerHTML="Invalid Designation";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("desi").style.borderColor="green";
+					document.getElementById("edesi").innerHTML="";
+					
+				}
+
+				if(time=="")
+				{
+					document.getElementById("time").style.borderColor="red";
+					document.getElementById("etime").innerHTML="Invalid Selection";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("time").style.borderColor="green";
+					document.getElementById("etime").innerHTML="";
+					
+				}
+
+
+
+
+
+				
+
+
+				if(loc=="")
+				{
+					document.getElementById("loc").style.borderColor="red";
+					document.getElementById("eloc").innerHTML="Invalid Selection";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("loc").style.borderColor="green";
+					document.getElementById("eloc").innerHTML="";
+					
+					
+				}
+
+
+				if(cb1==true||cb2==true||cb3==true||cb4==true)
+				{
+					
+					
+				document.getElementById("ecb").innerHTML="";
+					
+				}
+				else
+				{
+					document.getElementById("ecb").innerHTML="Invalid Selection";
+					
+					status=false;
+					
+				}
+
+
+
+				if(salary=="")
+				{
+					document.getElementById("salary").style.borderColor="red";
+					document.getElementById("esalary").innerHTML="Invalid Input";
+					status=false;
+				}
+				else
+				{
+					document.getElementById("salary").style.borderColor="green";
+					document.getElementById("esalary").innerHTML="";
+					
+				}
+
+
+
+				if(status==true)
+				{
+					document.getElementById("fo1").submit();
+				}
+
+
+
+
+
+
+
+
+
+
+
+			}
+
+
+
+
+		</script>
+		
+</head>
+<body>
+	<div class="container well">
+		<div class="row">
+			<form action="#" method="POST" id="fo1">
+				<div id="back">	
+					<h3 class="text-center">Tutor Registration</h3>
+			<div class="row form-group">
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >First Name</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="fname">
+							<i id="efname" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Middle Name</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="mname">
+							
+							<i id="emname" style="color:red;"></i>
+
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Last Name</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="lname">
+
+							<i id="elname" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				</div>
+
+
+
+
+
+
+
+				<div class="row form-group">
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Email</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="email">
+							<i id="eemail" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Password</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" id="pass">
+							<i id="epass" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Confirm Password</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="password" class="form-control" id="confirm">
+							<i id="econfirm" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			<div class="row form-group">
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Mobile</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="text" class="form-control" id="mob">
+							<i id="emob" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >City</label>
+						</div>
+						<div class="col-sm-8" >
+							<select name="city" class="form-control" id="city"> 
+								<option value=""></option>
+								<option value="Bangalore">Bangalore</option>
+								<option value="Sultanpur">Sultanpur</option>
+							</select>
+							<i id="ecity" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >State</label>
+						</div>
+						<div class="col-sm-8">
+							<select name="state" class="form-control" id="state"> 
+								<option value=""></option>
+								<option value="KA">KA</option>
+								<option value="UP">UP</option>
+							</select>
+							<i id="estate" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+		
+
+			<div class="row form-group">
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Address</label>
+						</div>
+						<div class="col-sm-8">
+							<textarea class="form-control"  rows="5" id="add"></textarea>
+							<i id="eadd" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Gender</label>
+						</div>
+						<div class="col-sm-8">
+							<input type="radio" name="gender" value="m" id="male">Male
+							<input type="radio" name="gender" value="f" id="female">Female
+
+						</div>
+						<i id="egen" style="color:red;"></i>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Experience</label>
+						</div>
+						<div class="col-sm-8">
+							<select name="expr" class="form-control" id="exp"> 
+								<option value=""></option>
+								<option value="0">0</option>
+								<option value="1">1</option>
+							</select>
+							<i id="eexp" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+			<div class="row form-group">
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Designation</label>
+						</div>
+						<div class="col-sm-8">
+
+							<select name="city" class="form-control" id="desi"> 
+								<option value=""></option>
+								<option value="Front-end">Front-end</option>
+								<option value="BackEnd">Back-End</option>
+							</select>
+							<i id="edesi" style="color:red;"></i>
+							
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Preferred Timing</label>
+						</div>
+						<div class="col-sm-8">
+							<select name="time" class="form-control" id="time"> 
+								<option value=""></option>
+								<option value="Morning">Morning(9-12)</option>
+								<option value="Afternoon">Afternoon(2-4)</option>
+								<option value="Evening">Evening(5-7)</option>
+								
+								
+							</select>
+							<i id="etime" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-4">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Preferred Location</label>
+						</div>	
+						<div class="col-sm-8">
+							<select name="loc" class="form-control" id="loc"> 
+								<option value=""></option>
+								<option value="Bangalore">Bangalore</option>
+								<option value="Mumbai">Mumbai</option>
+							</select>
+							<i id="eloc" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+
+
+
+
+
+		<div class="row form-group">
+				<div class="col-sm-5">
+					<div class="row form-group">
+						<div class="col-sm-2">
+							<label >Preferred Subject</label>
+						</div>
+						<div class="col-sm-10">
+							<input type="checkbox" name="subject" value="java" id="cb1">Java
+							<input type="checkbox" name="subject" value=".net" id="cb2">.Net
+							<input type="checkbox" name="subject" value="PHP" id="cb3">PHP
+							<input type="checkbox" name="subject" value="Python" id="cb4">Python
+
+							
+							<i id="ecb" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				<div class="col-sm-7">
+					<div class="row form-group">
+						<div class="col-sm-4">
+							<label >Expected Salary</label>
+						</div>
+						<div class="col-sm-8">
+						<input type="text" class="form-control" id="salary">
+						<i id="esalary" style="color:red;"></i>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+
+
+
+
+
+
+
+
+			<div class="row form-group">
+				<div class="col-sm-12 text-center">
+					<button type="button" class="btn btn-success" onclick="saveform()">Save</button>
+					<button type="reset" class="btn btn-danger">Clear</button>
+				</div>
+			</div>
+
+
+
+
+
+
+
+
+
+	</div>
+	
+	</form>
+	</div>
+	</div>
+	
+
+
+</body>
+
+</html>
